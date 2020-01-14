@@ -25,7 +25,7 @@ namespace RealWorldApp.Services
             var httpClient = new HttpClient(new System.Net.Http.HttpClientHandler());
             var json=JsonConvert.SerializeObject(registerModel);
             var content=new StringContent(json, Encoding.UTF8,"application/json");
-            var response = await httpClient.PostAsync("https://192.168.1.108:45456/api/accounts/register", content);
+            var response = await httpClient.PostAsync("https://192.168.1.108:45457/api/accounts/register", content);
             if (!response.IsSuccessStatusCode)
             {
                 return false;
@@ -48,7 +48,7 @@ namespace RealWorldApp.Services
             var httpClient = new HttpClient();
             var json = JsonConvert.SerializeObject(loginModel);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
-            var response = await httpClient.PostAsync("https://localhost:45457/api/accounts/login", content);
+            var response = await httpClient.PostAsync("https://localhost:45456/api/accounts/login", content);
             if (!response.IsSuccessStatusCode)
             {
                 return false;
