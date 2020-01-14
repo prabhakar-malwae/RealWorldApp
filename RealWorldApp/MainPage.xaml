@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:tranformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             mc:Ignorable="d"
+             x:Class="RealWorldApp.MainPage">
+
+    <StackLayout>
+        <!--<ffimageloading:CachedImage 
+			WidthRequest="100" HeightRequest="100"
+          
+			Source = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQjkCZJkahTvAu-8I_3sL-CcG1dSxNt6C86-jww9tLK-scBIpjZ"
+        CacheType="All">
+            <ffimageloading:CachedImage.Transformations>
+                <tranformations:CircleTransformation/>
+            </ffimageloading:CachedImage.Transformations>
+        </ffimageloading:CachedImage>-->
+        <Entry Placeholder="Enter your User ID" x:Name="entUserName"></Entry>
+        <Button Text="Save" x:Name="btnSave" Clicked="btnSave_Clicked" />
+        <Button Text="Retreive" x:Name="btnRetreive" Clicked="btnRetreive_Clicked"/>
+        <Label x:Name="lblUserName"></Label>
+    </StackLayout>
+
+</ContentPage>
